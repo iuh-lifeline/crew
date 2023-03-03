@@ -1,0 +1,146 @@
+/* color variables applied to the site root */
+:root{
+    --mainColor: #981e32;
+    --lightBlueAccent: #7da1c4;
+    --darkBlueAccent: #194558;
+}
+
+/* removes default formatting from all elements */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+/* sets default font on body */
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* nav styles */
+nav{
+    height: 100px;
+    background: var(--mainColor);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLogoWrap{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navLogo{
+    height: 80px;
+    width: auto;
+}
+
+.navLinks{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0 20px;
+}
+
+.navLinks > li{
+    padding: 20px;
+}
+
+.navLinks > li a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* help button styles */
+.help{
+    padding: 10px 16px !important;
+    border-radius: 10px;
+    background: var(--darkBlueAccent);
+}
+
+.help a{
+    font-weight: 600 !important;
+}
+
+.footLinks .help{
+    margin: 6px 0 0;
+    background: var(--darkBlueAccent);
+}
+
+.footLinks .help a{
+    text-decoration: none;
+    color: white;
+}
+
+.listImage{
+    height: 30px;
+    width: auto;
+}
+
+
+
+/* footer styles */
+.footer{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: solid 6px var(--mainColor);
+    position: absolute;
+    bottom: 0;
+}
+
+.footer::after{
+    content: "";
+    background-image: url(./Lifeline_Riley_Pad_2018_08.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 62% center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    opacity: .375;
+}
+
+.footLogoWrap, .footText, .footLinks{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0 20px;
+}
+
+.footLogo{
+    width: 250px;
+}
+
+.footLinks{
+    flex-direction: column;
+}
+
+.footLinks > li{
+    padding: 6px;
+}
+
+.footLinks > li a{
+    color: var(--mainColor);
+    text-transform: uppercase;
+    font-weight: 600;
+}
