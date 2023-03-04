@@ -4,6 +4,7 @@
     --lightBlueAccent: #7da1c4;
     --darkBlueAccent: #194558;
     --lightGrayAccent: rgba(220, 211, 203, .4);
+    --darkGrayAccent: #a59c94;
 }
 
 /* removes default formatting from all elements */
@@ -71,21 +72,27 @@ nav{
 
 /* help button styles */
 .help{
+    
+    border-radius: 10px;
+}
+
+.help > a{
     padding: 10px 16px !important;
     border-radius: 10px;
     background: var(--darkBlueAccent);
-}
-
-.help a{
     font-weight: 600 !important;
 }
 
 .footLinks .help{
-    margin: 6px 0 0;
-    background: var(--darkBlueAccent);
+    
+
 }
 
-.footLinks .help a{
+.footLinks .help > a{
+    padding: 10px 16px !important;
+    border-radius: 10px;
+    background: var(--darkBlueAccent);
+    font-weight: 600 !important;
     text-decoration: none;
     color: white;
 }
@@ -97,7 +104,7 @@ nav{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
-    flex-wrap: wrap;
+    
     padding: 40px;
 }
 
@@ -147,7 +154,7 @@ nav{
     height: 200px;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    
     border-top: solid 6px var(--mainColor);
     position: relative;
     bottom: 0;
@@ -188,19 +195,39 @@ nav{
 }
 
 .footLinks > li{
-    padding: 6px;
+    margin: 4px;
 }
 
-.footLinks > li a{
-    color: var(--mainColor);
+.footLinks > li:not(.help){
+    width: 160px;
+    text-align: center;
+}
+
+.footLinks .crewOps a, .footLinks .admin a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: var(--mainColor);
     text-transform: uppercase;
+    text-decoration: none;
     font-weight: 600;
+}
+
+.footLinks .help a{
+    display: flex;
 }
 
 /* mobile styles */
 @media screen and (max-width: 970px){
     .links{
-        
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
     }
 
     .menuToggle {
@@ -293,5 +320,28 @@ nav{
 
       .navLinks{
         flex-direction: column;
+      }
+
+      .footer{
+        flex-direction: column;
+        height: 300px;
+        align-items: center;
+      }
+
+      .footLogoWrap{
+        order: 2;
+        height: 35%;
+      }
+
+      .footText{
+        order: 3;
+        height: 20%;
+        padding: 20px;
+      }
+
+      .footLinks{
+        order: 1;
+        height: 100%;
+        margin: 20px;
       }
 }
