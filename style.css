@@ -64,6 +64,9 @@ nav{
 }
 
 .navLinks > li a{
+    padding: 10px 16px !important;
+    border-radius: 10px;
+    border: solid 2px white;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -81,6 +84,7 @@ nav{
     border-radius: 10px;
     background: var(--darkBlueAccent);
     font-weight: 600 !important;
+    border: solid 2px var(--darkBlueAccent) !important;
 }
 
 .footLinks .help{
