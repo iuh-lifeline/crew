@@ -140,7 +140,7 @@ nav{
     transition: all .3s ease-in-out;
 }
 
-.listLink a:hover{
+.listLink a:hover, .listLink a:active{
     transform: scale(120%); 
 }
 .listImage{
