@@ -140,9 +140,10 @@ nav{
     transition: all .3s ease-in-out;
 }
 
-.listLink a:hover, .listLink a:active{
+.listLink a:hover{
     transform: scale(120%); 
 }
+
 .listImage{
     height: 30px;
     width: auto;
@@ -348,4 +349,10 @@ nav{
         height: 100%;
         margin: 20px;
       }
+}
+
+@media (hover: none){
+    .listLink a:hover{
+        transform: none; 
+    }
 }
